@@ -67,7 +67,7 @@ public class Main {
 				primitives[3] = new Kreis(1.0f);
 				//PRINT STUFF
 				for(int i = 0; i < primitives.length; i++){
-						System.out.println( primitives[i].toString() + " Flaecheninhalt=" + primitives[i].flaechenInhalt() + "f");
+						System.out.println( primitives[i].toString() + " Flaecheninhalt=" + primitives[i].flaechen_inhalt() + "f");
 				}
 
 		}

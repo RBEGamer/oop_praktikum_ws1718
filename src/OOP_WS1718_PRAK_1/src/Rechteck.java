@@ -17,6 +17,7 @@ public class Rechteck extends Primitive {
 		Rechteck(int _x, int _y){
 				position = new Point(_x,_y);
 		}
+
 		Rechteck(int _x, int _y, int _w, int _h){
 				position = new Point(_x,_y);
 				size = new Point(_w,_h);
@@ -38,17 +39,20 @@ public class Rechteck extends Primitive {
 		}
 
 		/** return die recht size */
+		/** @return ret obj size */
 		public Point get_size(){
 				return size;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
-		public float flaechenInhalt(){
+		/** @return float ret area */
+		public float flaechen_inhalt(){
 				return (float)(size.x*size.y);
 		}
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _obj punkt zum checken*/
+		/** @return boolean if equal returns true */
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
@@ -73,12 +77,15 @@ public class Rechteck extends Primitive {
 		}
 
 		/** formatierter string der pos */
+		/** @return String nice string */
 		@Override
 		public String toString(){
 				return getClass().getName()  + " position="  + position.toString() + " size=" + size.toString();
 		}
 
 		/** clont objekt */
+		/** @return Rechteck a clone */
+		/** @see Rechteck */
 		@Override
 		protected Rechteck clone() throws CloneNotSupportedException {
 				return (Rechteck) super.clone();

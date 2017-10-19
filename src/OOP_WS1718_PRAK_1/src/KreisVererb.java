@@ -11,7 +11,7 @@ public class KreisVererb extends Point{
 		float radius;
 
 		KreisVererb(){
-				radius = 1;
+				radius = 1.0f;
 		}
 
 		KreisVererb(KreisVererb _kv){
@@ -32,6 +32,7 @@ public class KreisVererb extends Point{
 		}
 
 		/**  returnt radius*/
+		/** @return radius */
 		float get_radius(){
 				return radius;
 		}
@@ -44,6 +45,7 @@ public class KreisVererb extends Point{
 
 		/** schaut ob die objs gleich sind*/
 		/** @param _obj zu checkender kreis halt*/
+		/** @return boolean true if equal */
 		@Override
 		public boolean equals(Object _obj){
 				//check same
@@ -67,6 +69,7 @@ public class KreisVererb extends Point{
 		}
 
 		/** obj als string*/
+		/** @retrun String nice string */
 		@Override
 		public String toString() {
 				return getClass().getName()  + " { " + Integer.toString(x) + " | " + Integer.toString(y) + " } r= " + Float.toString(radius);

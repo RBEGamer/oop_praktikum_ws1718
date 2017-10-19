@@ -30,17 +30,21 @@ public class Primitive {
 		}
 
 		/** return die pos */
+		/** @return Point returns obj pos */
+		/** @see Point */
 		public Point get_position(){
 				return position;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
-		public float flaechenInhalt(){
+		/** @return float returns obj area */
+		public float flaechen_inhalt(){
 				return 0.0f;
 		}
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _obj punkt zum checken*/
+		/** @return boolean if equal = true */
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
@@ -65,12 +69,15 @@ public class Primitive {
 		}
 
 		/** formatierter string der pos */
+		/** @return String returns nice string */
 		@Override
 		public String toString(){
 				return getClass().getName()  + " position="  + this.position.toString();
 		}
 
 		/** clont objekt */
+		/** @return Primitive retutns clone */
+		/** @see Primitive */
 		@Override
 		protected Primitive clone() throws CloneNotSupportedException {
 				return (Primitive) super.clone();

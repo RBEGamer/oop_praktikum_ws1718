@@ -27,6 +27,8 @@ public class Point {
 		}
 
 		/** gibt den punkt zurück als location */
+		/** @return location of obj */
+		/** @see Point */
 		public Point get_location(){
 				return this;
 		}
@@ -54,6 +56,7 @@ public class Point {
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _obj punkt zum checken*/
+		/** @return boolean if equal the true */
 		@Override
 		 public boolean equals(Object _obj){
 				 //check same
@@ -78,6 +81,7 @@ public class Point {
 		}
 
 		/** formatierter string der pos */
+		/** @return nice string */
 		@Override
 		 public String toString(){
 			return getClass().getName()  + " {" + Integer.toString(x) + "|" + Integer.toString(y) + "}";

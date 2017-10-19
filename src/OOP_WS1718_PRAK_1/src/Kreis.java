@@ -44,17 +44,20 @@ public class Kreis extends Primitive {
 		}
 
 		/** return die recht size */
+		/** @return float radius */
 		public float get_radius(){
 				return radius;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
-		public float flaechenInhalt(){
+		/** @return float area */
+		public float flaechen_inhalt(){
 				return (float)Math.pow(radius,2.0)*PI;
 		}
 
 		/** schaut ob zwei punkte gleich sind */
-		/** @param _obj punkt zum checken*/
+		/** @param _obj punkt zum checken */
+		/** @return boolean if equal */
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
@@ -79,12 +82,15 @@ public class Kreis extends Primitive {
 		}
 
 		/** formatierter string der pos */
+		/** @return nice string */
 		@Override
 		public String toString(){
 				return getClass().getName()  + " position="  + position.toString() + " radius=" + radius;
 		}
 
 		/** clont objekt */
+		/** @reutrn Kreis clone */
+		/** @see Kreis */
 		@Override
 		protected Kreis clone() throws CloneNotSupportedException {
 				return (Kreis) super.clone();
