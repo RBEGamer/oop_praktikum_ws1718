@@ -1,8 +1,11 @@
+import sun.jvm.hotspot.types.PointerType;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("OOS PRAK 1");
+        System.out.println("OOS PRAK 1 A 1");
         oos_prak_1_aufg1(args);
+				System.out.println("OOS PRAK 1 A 2");
         oos_prak_1_aufg_2(args);
     }
 
@@ -43,13 +46,13 @@ public class Main {
 				}
     }
 
-
-
-
-
     public static void oos_prak_1_aufg_2(String[] _args){
-
-
-
+			Point test_p = new Point(2,3);
+			System.out.println(test_p.toString());
+			test_p.move(-1,-2);
+			test_p = new KreisVererb(4,1,5.6f);
+			System.out.println(test_p.toString());
+			System.out.println(test_p.equals(new KreisVererb(4,1,5.6f)));
 		}
+		
 }
