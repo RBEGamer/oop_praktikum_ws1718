@@ -80,7 +80,7 @@ public class Point {
 		/** formatierter string der pos */
 		@Override
 		 public String toString(){
-			return getClass().getName()  + " { " + Integer.toString(x) + " | " + Integer.toString(y) + " }";
+			return getClass().getName()  + " {" + Integer.toString(x) + "|" + Integer.toString(y) + "}";
 				}
 }
 

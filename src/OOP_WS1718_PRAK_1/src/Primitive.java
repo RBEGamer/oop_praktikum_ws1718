@@ -1,15 +1,38 @@
+/*
+CLASS: Primitive
+AUTHOR: Marcel Ochsendorf
+CREATION_DATE: 20.20.2017
+GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
+DESC: Base class für versch objekte Rechteck Kreis....
+*/
+
 public class Primitive {
 
 		Point position;
 
 
 		Primitive(){
-				position = new Point();
+				position = new Point(0,0);
 		}
 
+		Primitive(int _x, int _y){
+				position = new Point(_x,_y);
+		}
 
+		Primitive(Primitive _prim){
+				position = _prim.position;
+		}
 
+		/** schaut ob zwei punkte gleich sind */
+		/** @param _pos neue position*/
+		public void set_position(Point _pos){
+				this.position = _pos;
+		}
 
+		/** return die pos */
+		public Point get_position(){
+				return position;
+		}
 
 		/** berechnet flaecheninhalt des primitivs */
 		public float flaechenInhalt(){
