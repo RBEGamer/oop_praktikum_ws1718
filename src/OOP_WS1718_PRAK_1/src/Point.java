@@ -53,11 +53,27 @@ public class Point {
 		}
 
 		/** schaut ob zwei punkte gleich sind */
-		/** @param _p punkt zum checken*/
-		 public boolean equals(Point _p){
-				if(x == _p.x && y == _p.y) {
-						return true;
-				}
+		/** @param _obj punkt zum checken*/
+		@Override
+		 public boolean equals(Object _obj){
+				 //check same
+				 if (this == _obj) {
+						 return true;
+				 }
+				 // check null
+				 if (_obj == null) {
+						 return false;
+				 }
+				 //check type
+				 if (getClass() != _obj.getClass()){
+						 return false;
+				 }
+				 //cast to main type
+				 Point _obj_cast = (Point) _obj;
+				 //chekc field
+				 if(_obj_cast.x == this.x && _obj_cast.y == this.y) {
+						 return true;
+				 }
 				return false;
 		}
 

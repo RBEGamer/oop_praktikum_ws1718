@@ -7,6 +7,8 @@ public class Main {
         oos_prak_1_aufg1(args);
 				System.out.println("OOS PRAK 1 A 2");
         oos_prak_1_aufg_2(args);
+				System.out.println("OOS PRAK 1 A 3");
+				oos_prak_1_aufg_3(args);
     }
 
     public static void oos_prak_1_aufg1(String[] _args){
@@ -54,5 +56,9 @@ public class Main {
 			System.out.println(test_p.toString());
 			System.out.println(test_p.equals(new KreisVererb(4,1,5.6f)));
 		}
-		
+
+		public static void oos_prak_1_aufg_3(String[] _args){
+
+
+		}
 }

@@ -43,9 +43,24 @@ public class KreisVererb extends Point{
 		}
 
 		/** schaut ob die objs gleich sind*/
-		/** @param _kv zu checkender kreis halt*/
-		public boolean equals(KreisVererb _kv){
-				if(x == _kv.x && y == _kv.y && radius == _kv.radius){
+		/** @param _obj zu checkender kreis halt*/
+		@Override
+		public boolean equals(Object _obj){
+				//check same
+				if (this == _obj) {
+						return true;
+				}
+				// check null
+				if (_obj == null) {
+						return false;
+				}
+				//check type
+				if (getClass() != _obj.getClass()){
+						return false;
+				}
+				//cast to main type
+				KreisVererb _obj_cast = (KreisVererb) _obj;
+				if(x == _obj_cast.x && y == _obj_cast.y && radius == _obj_cast.radius){
 						return true;
 				}
 				return false;
@@ -56,4 +71,5 @@ public class KreisVererb extends Point{
 		public String toString() {
 				return getClass().getName()  + " { " + Integer.toString(x) + " | " + Integer.toString(y) + " } r= " + Float.toString(radius);
 		}
+
 }
