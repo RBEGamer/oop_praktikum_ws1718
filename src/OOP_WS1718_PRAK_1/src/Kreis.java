@@ -1,9 +1,10 @@
-/*
-CLASS: Kreis
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: einerfacher Kreis
+/**
+class Kreis
+@author Marcel Ochsendorf
+creation_date 20.20.2017
+@version 1.0
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc einerfacher Kreis
 */
 
 public class Kreis extends Primitive {
@@ -61,17 +62,11 @@ public class Kreis extends Primitive {
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
-				if (this == _obj) {
-						return true;
-				}
+				if (this == _obj) {return true;}
 				// check null
-				if (_obj == null) {
-						return false;
-				}
+				if (_obj == null) {return false;}
 				//check type
-				if (getClass() != _obj.getClass()){
-						return false;
-				}
+				if (getClass() != _obj.getClass()){return false; }
 				//cast to main type
 				Kreis _obj_cast = (Kreis)_obj;
 				//chekc field

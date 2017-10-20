@@ -1,9 +1,10 @@
-/*
-CLASS: Primitive
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Base class für versch objekte Rechteck Kreis....
+/**
+class Primitive
+@author  Marcel Ochsendorf
+creation_date 20.20.2017
+@version 1.0
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Base class für versch objekte Rechteck Kreis....
 */
 
 public class Primitive {
@@ -48,17 +49,11 @@ public class Primitive {
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
-				if (this == _obj) {
-						return true;
-				}
+				if (this == _obj) {return true;}
 				// check null
-				if (_obj == null) {
-						return false;
-				}
+				if (_obj == null) {return false;}
 				//check type
-				if (getClass() != _obj.getClass()){
-						return false;
-				}
+				if (getClass() != _obj.getClass()){return false;}
 				//cast to main type
 				Primitive _obj_cast = (Primitive)_obj;
 				//chekc field

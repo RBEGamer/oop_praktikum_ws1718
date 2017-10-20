@@ -1,9 +1,10 @@
-/*
-CLASS: KreisVererb
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Einfacher Kreis, extends Point mit zusätzlichen radius
+/**
+class KreisVererb
+@author Marcel Ochsendorf
+creation_date 20.20.2017
+@version 1.0
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Einfacher Kreis, extends Point mit zusätzlichen radius
 */
 
 public class KreisVererb extends Point{
@@ -72,7 +73,7 @@ public class KreisVererb extends Point{
 		/** @retrun String nice string */
 		@Override
 		public String toString() {
-				return getClass().getName()  + " { " + Integer.toString(x) + " | " + Integer.toString(y) + " } r= " + Float.toString(radius);
+				return getClass().getName()  + " {" + Integer.toString(x) + "|" + Integer.toString(y) + "} r=" + Float.toString(radius)+ "f";
 		}
 
 }

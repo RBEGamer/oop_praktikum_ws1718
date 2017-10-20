@@ -1,9 +1,10 @@
-/*
-CLASS: Primitive
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Einfaces Rechteck extends Primitive
+/**
+class Primitive
+@author  Marcel Ochsendorf
+creation_date 20.20.2017
+@version 1.0
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Einfaces Rechteck extends Primitive
 */
 
 public class Rechteck extends Primitive {
@@ -14,6 +15,7 @@ public class Rechteck extends Primitive {
 				position = new Point(0,0);
 				size = new Point(0,0);
 		}
+
 		Rechteck(int _x, int _y){
 				position = new Point(_x,_y);
 		}
@@ -22,6 +24,7 @@ public class Rechteck extends Primitive {
 				position = new Point(_x,_y);
 				size = new Point(_w,_h);
 		}
+
 		Rechteck(Point _pos, Point _size){
 				position = _pos;
 				size = _size;
@@ -56,17 +59,11 @@ public class Rechteck extends Primitive {
 		@Override
 		public boolean equals(Object _obj) {
 				//check same
-				if (this == _obj) {
-						return true;
-				}
+				if (this == _obj) {return true; }
 				// check null
-				if (_obj == null) {
-						return false;
-				}
+				if (_obj == null) {return false;}
 				//check type
-				if (getClass() != _obj.getClass()){
-						return false;
-				}
+				if (getClass() != _obj.getClass()){return false;}
 				//cast to main type
 				Rechteck _obj_cast = (Rechteck)_obj;
 				//chekc field

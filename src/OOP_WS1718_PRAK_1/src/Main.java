@@ -19,33 +19,29 @@ public class Main {
 						return;
 				}
 				//ARRAY FÜR DAS DREIECK
-				int[][] pascal = new int[PASCAL_DEPTH][];
+				long[][] pascal = new long[PASCAL_DEPTH][];
+				String tmp = "";
 				//anlegen der unter arrays
 				for (int i = 0; i < PASCAL_DEPTH; i++) {
-						pascal[i] = new int[i + 1]; //neues array an die neue pos des ersten
-				}
-				//INITIALE WERTE EINTRAGEN
-				pascal[0][0] = 1;
-				pascal[1][0] = 1;
-				pascal[1][1] = 1;
-				//INNERE WERTE BERECHNEN
-				for (int i = 2;i < PASCAL_DEPTH; i++){
+						//ARRAYS INIT
+						pascal[i] = new long[i + 1];
+						//1 ENDE ANFANG ANFÜGEN
 						pascal[i][0] = 1;
 						pascal[i][i] = 1;
-						//CALC NETX ROW
-						for (int j = 1;j < i; j++){
-							pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j];
-					}
-				}
-				//AUSGABE
-				String tmp = "";
-				for (int i = 0; i < PASCAL_DEPTH; i++) {
+						//CALC NETX ROW SUM
+						if(i >= 2) {
+								for (int j = 1; j < i; j++) {
+										pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+								}
+						}
+						//AUSGABE
 						tmp = "";
 						for (int j = 0; j < i + 1; j++) {
-								tmp += Integer.toString(pascal[i][j]) + " ";
+								tmp += Long.toString(pascal[i][j]) + " ";
 						}
 						System.out.println(tmp);
 				}
+
     }
 
     public static void oos_prak_1_aufg_2(String[] _args){
@@ -54,8 +50,8 @@ public class Main {
 			test_p.move(-1,-2);
 			test_p = new KreisVererb(4,1,5.6f);
 			System.out.println(test_p.toString());
-			System.out.println("Equal test 1 :" + test_p.equals(new KreisVererb(4,1,5.6f)));
-			System.out.println("Equal test 2 :" + test_p.equals(new KreisVererb(4,1,5.4f)));
+			System.out.println("Equal test 1: " + test_p.equals(new KreisVererb(4,1,5.6f)));
+			System.out.println("Equal test 2: " + test_p.equals(new KreisVererb(4,1,5.4f)));
 		}
 
 		public static void oos_prak_1_aufg_3(String[] _args){
@@ -66,9 +62,8 @@ public class Main {
 				primitives[2] = new Kreis(4,5,2.3f);
 				primitives[3] = new Kreis(1.0f);
 				//PRINT STUFF
-				for(int i = 0; i < primitives.length; i++){
-						System.out.println( primitives[i].toString() + " Flaecheninhalt=" + primitives[i].flaechen_inhalt() + "f");
+				for(Primitive n: primitives){
+						System.out.println( n.toString() + " Flaecheninhalt=" + n.flaechen_inhalt() + "f");
 				}
-
 		}
 }
