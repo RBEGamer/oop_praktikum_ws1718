@@ -7,19 +7,19 @@ public class Main {
 				System.out.println();
 				System.out.println();
 				System.out.println();
-        System.out.println("OOS PRAK 1 A 1");
+        System.out.println("OOS PRAK 1 TASK 1");
         oos_prak_1_aufg1(args);
 				System.out.println();
 				System.out.println();
 				System.out.println();
 				System.out.println();
-				System.out.println("OOS PRAK 1 A 2");
+				System.out.println("OOS PRAK 1 TASK 2");
         oos_prak_1_aufg_2(args);
 				System.out.println();
 				System.out.println();
 				System.out.println();
 				System.out.println();
-				System.out.println("OOS PRAK 1 A 3");
+				System.out.println("OOS PRAK 1 TASK 3");
 				oos_prak_1_aufg_3(args);
     }
 
