@@ -1,9 +1,10 @@
-/*
-CLASS: Point
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Einfache 2D Punkt (X, Y)
+/**
+class Point
+@author Marcel Ochsendorf
+@veriosn 1.0
+creation_date 20.20.2017
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Einfache 2D Punkt (X, Y)
 */
 
 public class Point {

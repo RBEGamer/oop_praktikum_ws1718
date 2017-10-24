@@ -1,9 +1,10 @@
-/*
-CLASS: Primitive
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Einfaces Rechteck extends Primitive
+/**
+class Primitive
+@author  Marcel Ochsendorf
+@version 1.0
+creation_date 20.20.2017
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Einfaces Rechteck extends Primitive
 */
 
 public class Rechteck extends Primitive {

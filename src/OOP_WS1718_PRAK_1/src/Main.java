@@ -3,10 +3,22 @@ import sun.jvm.hotspot.types.PointerType;
 public class Main {
 
     public static void main(String[] args) {
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
         System.out.println("OOS PRAK 1 A 1");
         oos_prak_1_aufg1(args);
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
 				System.out.println("OOS PRAK 1 A 2");
         oos_prak_1_aufg_2(args);
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
 				System.out.println("OOS PRAK 1 A 3");
 				oos_prak_1_aufg_3(args);
     }
@@ -20,22 +32,22 @@ public class Main {
 				}
 				//ARRAY FÜR DAS DREIECK
 				int[][] pascal = new int[PASCAL_DEPTH][];
+
 				//anlegen der unter arrays
 				for (int i = 0; i < PASCAL_DEPTH; i++) {
-						pascal[i] = new int[i + 1]; //neues array an die neue pos des ersten
-				}
-				//INITIALE WERTE EINTRAGEN
-				pascal[0][0] = 1;
-				pascal[1][0] = 1;
-				pascal[1][1] = 1;
-				//INNERE WERTE BERECHNEN
-				for (int i = 2;i < PASCAL_DEPTH; i++){
+						//neues array an die neue pos des ersten und um 1 element grösser
+						pascal[i] = new int[i + 1];
+						//SETZTE DIE äussersten zellen auf 1
 						pascal[i][0] = 1;
 						pascal[i][i] = 1;
-						//CALC NETX ROW
-						for (int j = 1;j < i; j++){
-							pascal[i][j] = pascal[i-1][j-1] + pascal[i-1][j];
-					}
+						//INNERE WERTE BERECHNEN dies geht nur wenn es etwas zu addieren gibt man also in der 2. zeile ist
+						if (i >= 2) {
+								//CALC NETX ROW mit der formel
+								for (int j = 1; j < i; j++) {
+										pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+
+								}
+						}
 				}
 				//AUSGABE
 				String tmp = "";
@@ -54,17 +66,18 @@ public class Main {
 			test_p.move(-1,-2);
 			test_p = new KreisVererb(4,1,5.6f);
 			System.out.println(test_p.toString());
-			System.out.println("Equal test 1 :" + test_p.equals(new KreisVererb(4,1,5.6f)));
-			System.out.println("Equal test 2 :" + test_p.equals(new KreisVererb(4,1,5.4f)));
+			System.out.println("Equal test 1 (should be true):" + test_p.equals(new KreisVererb(4,1,5.6f)));
+			System.out.println("Equal test 2 (should be false):" + test_p.equals(new KreisVererb(4,1,5.4f)));
 		}
 
 		public static void oos_prak_1_aufg_3(String[] _args){
-				Primitive[] primitives = new Primitive[4];
+				Primitive[] primitives = new Primitive[5];
 				//Create some instances with random values
-				primitives[0] = new Rechteck(1,2,3,4);
-				primitives[1] = new Rechteck(4,5,2,1); //see 0
-				primitives[2] = new Kreis(4,5,2.3f);
-				primitives[3] = new Kreis(1.0f);
+				primitives[0] = new Primitive(10,12);
+				primitives[1] = new Rechteck(1,2,3,4);
+				primitives[2] = new Rechteck(4,5,2,1); //see 0
+				primitives[3] = new KreisAgg(4,5,2.3f);
+				primitives[4] = new KreisAgg(1.0f);
 				//PRINT STUFF
 				for(int i = 0; i < primitives.length; i++){
 						System.out.println( primitives[i].toString() + " Flaecheninhalt=" + primitives[i].flaechen_inhalt() + "f");

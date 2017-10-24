@@ -1,9 +1,10 @@
-/*
-CLASS: KreisVererb
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: Einfacher Kreis, extends Point mit zusätzlichen radius
+/**
+class KreisVererb
+@author Marcel Ochsendorf
+@version 1.0
+creation_date 20.20.2017
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc Einfacher Kreis, extends Point mit zusätzlichen radius
 */
 
 public class KreisVererb extends Point{

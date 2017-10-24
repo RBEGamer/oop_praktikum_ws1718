@@ -1,38 +1,39 @@
-/*
-CLASS: Kreis
-AUTHOR: Marcel Ochsendorf
-CREATION_DATE: 20.20.2017
-GITHUB: https://github.com/RBEGamer/oop_praktikum_ws1718
-DESC: einerfacher Kreis
+/**
+class Kreis
+@author Marcel Ochsendorf
+@veriosn 1.0
+creation_date 20.20.2017
+source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+desc einerfacher Kreis
 */
 
-public class Kreis extends Primitive {
+public class KreisAgg extends Primitive {
 
 		final float PI = (float)Math.PI;
 		float radius;
 
 
-		Kreis(){
+		KreisAgg(){
 				position = new Point(0,0);
 				radius = 1.0f;
 		}
-		Kreis(float _r){
+		KreisAgg(float _r){
 				radius = _r;
 		}
-		Kreis(int _x, int _y){
+		KreisAgg(int _x, int _y){
 				position = new Point(_x,_y);
 				radius = 1.0f;
 		}
-		Kreis(int _x, int _y, float _r){
+		KreisAgg(int _x, int _y, float _r){
 				position = new Point(_x,_y);
 				radius = _r;
 		}
-		Kreis(Point _pos, float _r){
+		KreisAgg(Point _pos, float _r){
 				position = _pos;
 				radius = _r;
 		}
 
-		Kreis(Kreis _cir){
+		KreisAgg(KreisAgg _cir){
 				position = _cir.position;
 				radius = _cir.radius;
 		}
@@ -73,9 +74,9 @@ public class Kreis extends Primitive {
 						return false;
 				}
 				//cast to main type
-				Kreis _obj_cast = (Kreis)_obj;
+				KreisAgg _obj_cast = (KreisAgg)_obj;
 				//chekc field
-				if(_obj_cast.position.equals(position) && radius == ((Kreis)_obj).radius) {
+				if(_obj_cast.position.equals(position) && radius == ((KreisAgg)_obj).radius) {
 						return true;
 				}
 				return false;
@@ -90,10 +91,10 @@ public class Kreis extends Primitive {
 
 		/** clont objekt */
 		/** @reutrn Kreis clone */
-		/** @see Kreis */
+		/** @see KreisAgg */
 		@Override
-		protected Kreis clone() throws CloneNotSupportedException {
-				return (Kreis) super.clone();
+		protected KreisAgg clone() throws CloneNotSupportedException {
+				return (KreisAgg) super.clone();
 		}
 
 
