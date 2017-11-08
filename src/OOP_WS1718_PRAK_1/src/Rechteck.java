@@ -12,7 +12,8 @@ public class Rechteck extends Primitive {
 		Point size;
 
 		Rechteck(){
-				position = new Point(0,0);
+			super();  
+				//position = new Point(0,0);
 				size = new Point(0,0);
 		}
 		Rechteck(int _x, int _y){
