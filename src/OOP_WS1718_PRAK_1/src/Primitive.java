@@ -26,20 +26,20 @@ public class Primitive {
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _pos neue position*/
-		public void set_position(Point _pos){
+		public void setPosition(Point _pos){
 				this.position = _pos;
 		}
 
 		/** return die pos */
 		/** @return Point returns obj pos */
 		/** @see Point */
-		public Point get_position(){
+		public Point getPosition(){
 				return position;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
 		/** @return float returns obj area */
-		public float flaechen_inhalt(){
+		public float flaechenInhalt(){
 				return 0.0f;
 		}
 

@@ -40,19 +40,18 @@ public class KreisAgg extends Primitive {
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _r neue position*/
-		public void set_radius(float _r){
+		public void setRadius(float _r){
 				radius = _r;
 		}
-
 		/** return die recht size */
 		/** @return float radius */
-		public float get_radius(){
+		public float getRadius(){
 				return radius;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
 		/** @return float area */
-		public float flaechen_inhalt(){
+		public float flaechenInhalt(){
 				return (float)Math.pow(radius,2.0)*PI;
 		}
 

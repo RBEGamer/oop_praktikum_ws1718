@@ -35,19 +35,19 @@ public class Rechteck extends Primitive {
 
 		/** schaut ob zwei punkte gleich sind */
 		/** @param _size neue position*/
-		public void set_size(Point _size){
+		public void setSize(Point _size){
 				size = _size;
 		}
 
 		/** return die recht size */
 		/** @return ret obj size */
-		public Point get_size(){
+		public Point getSize(){
 				return size;
 		}
 
 		/** berechnet flaecheninhalt des primitivs */
 		/** @return float ret area */
-		public float flaechen_inhalt(){
+		public float flaechenInhalt(){
 				return (float)(size.x*size.y);
 		}
 

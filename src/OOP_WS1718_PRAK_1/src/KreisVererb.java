@@ -22,7 +22,7 @@ public class KreisVererb extends Point{
 		}
 
 		KreisVererb(Point _p, float _r){
-				this.set_location(_p);
+				this.setLocation(_p);
 				radius = _r;
 		}
 
@@ -34,13 +34,13 @@ public class KreisVererb extends Point{
 
 		/**  returnt radius*/
 		/** @return radius */
-		float get_radius(){
+		public float getRadius(){
 				return radius;
 		}
 
 		/** setzt radius*/
 		/** @param _r radius halt*/
-		void set_radius(float _r){
+		public void setRadius(float _r){
 				radius = _r;
 		}
 
@@ -74,6 +74,17 @@ public class KreisVererb extends Point{
 		@Override
 		public String toString() {
 				return getClass().getName()  + " { " + Integer.toString(x) + " | " + Integer.toString(y) + " } r= " + Float.toString(radius);
+		}
+
+		/** clont objekt */
+		/** @reutrn Kreis clone */
+		/** @see KreisAgg */
+		@Override
+		public boolean isValid(){
+				if(getRadius() >= 0.0f){
+						return true;
+				}
+				return false;
 		}
 
 }

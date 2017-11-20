@@ -30,20 +30,20 @@ public class Point {
 		/** gibt den punkt zurück als location */
 		/** @return location of obj */
 		/** @see Point */
-		public Point get_location(){
+		public Point getLocation(){
 				return this;
 		}
 
 		/** Setzt die position des Punktes */
 		/** @param _x x anteil des punktes */
 		/** @param _y y anteil des punktes */
-		public void set_location(int _x, int _y){
+		public void setLocation(int _x, int _y){
 				x = _x;
 				y = _y;
 		}
 		/** kopiert die location eines anderen punktes */
 		/** @param _p	punkt von dem die locstion übernaommen werden soll*/
-		 public void set_location(Point _p){
+		 public void setLocation(Point _p){
 				x = _p.x;
 				y = _p.y;
 		}
@@ -53,6 +53,10 @@ public class Point {
 		 public void move(int _dx, int _dy){
 				x += _dx;
 				y += _dy;
+		}
+
+		public boolean isValid(){
+		 		return true;
 		}
 
 		/** schaut ob zwei punkte gleich sind */
