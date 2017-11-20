@@ -10,13 +10,13 @@ public interface BenutzerVerwaltung {
 		/** trägt einen neuen benutzer ein */
 		/** @param _benutzer punkt zum checken*/
 		/** @return void */
-		 void benutzereintragen(Benutzer _benutzer);
+		 void benutzereintragen(Benutzer _benutzer) throws Exception;
 		/** schaut ob der benutzer valide ist */
 		/** @param _benutzer benutzer zum checken*/
 		/** @return boolean if valid the true */
-		 boolean benutzerOk(Benutzer _benutzer);
+		 boolean benutzerOk(Benutzer _benutzer) throws Exception;
 
 		/** listet alle gespeicherten benutzer auf */
 		/** @return void */
-		void listBenutzer();
+		void listBenutzer() throws Exception;
 }
