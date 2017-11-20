@@ -1,3 +1,11 @@
+/**
+ interface BenutzerVerwaltungAdmin
+ interface BenutzerVerwaltung
+ @version 1.0
+ creation_date 20.11.2017
+ source_url https://github.com/RBEGamer/oop_praktikum_ws1718
+ desc klasse zum bearbeiten und speichern der benutzertablle
+ */
 package de.marcelochsendorf;
 import java.util.*;
 public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
@@ -32,7 +40,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 						throw new ArrayStoreException("[" + this.getClass().toString() +"]" + " username already exists");
 				}
 				//CHECK IF PASSWROD VALID 8 CHARS
-				if(String.copyValueOf(_benutzer.passWort).toString() == "" || _benutzer.passWort.length < 8 ){
+				if(String.copyValueOf(_benutzer.passWort).toString() == "" || String.copyValueOf(_benutzer.passWort).length() < 8 ){
 						throw new ArrayStoreException("[" + this.getClass().toString() +"]" + " benutzereintragen invalid or empty password username has to be 8 chars min");
 				}
 				//USER EINTRAGEN
@@ -54,8 +62,10 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				return users.get(ret).equals(_benutzer);
 		}
 
-
-		void benutzerLöschen(Benutzer _benutzer) throws Exception{
+/** schaut ob zwei benutzer gleich sind */
+		/** @param _benutzer Benutzer  zum löschen */
+		/** @return void */
+		public void benutzerLöschen(Benutzer _benutzer) throws Exception{
 				// check null
 				if (_benutzer == null) {
 						throw new ArrayStoreException("[" + this.getClass().toString() +"]" + " benutzbenutzerLöschenerok got parameter with NULL");

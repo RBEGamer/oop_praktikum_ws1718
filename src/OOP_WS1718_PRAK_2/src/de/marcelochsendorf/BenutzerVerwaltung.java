@@ -15,7 +15,6 @@ public interface BenutzerVerwaltung {
 		/** @param _benutzer benutzer zum checken*/
 		/** @return boolean if valid the true */
 		 boolean benutzerOk(Benutzer _benutzer) throws Exception;
-
 		/** listet alle gespeicherten benutzer auf */
 		/** @return void */
 		void listBenutzer() throws Exception;

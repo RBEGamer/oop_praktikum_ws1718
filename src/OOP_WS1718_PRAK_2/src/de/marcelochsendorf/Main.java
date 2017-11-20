@@ -36,6 +36,9 @@ public class Main {
          vw.benutzerOk(new Benutzer("user","password"));
 
 
+         //BENUTZER DER NICHT EXISTIERT LÖSCHEN
+
+         //LÖSCHEN // ERSTELLEN //LÖSCHEN TESTEN
 
 
          vw.listBenutzer();
