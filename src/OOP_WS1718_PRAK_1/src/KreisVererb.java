@@ -12,6 +12,7 @@ public class KreisVererb extends Point{
 		float radius;
 
 		KreisVererb(){
+			super();  
 				radius = 1.0f;
 		}
 

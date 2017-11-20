@@ -5,3 +5,4 @@ Es wurde anstatt Eclipse, die ItelliJ IDE von JetBrains verwendet.
 
 ## Praktikum 1
 Im ersten Praktikum  wurden einfache Klassen für 2D Objekte (Kreis, Rechteck) erstellt. Dazu gibt es eine Base Class `Primitive`.
+
