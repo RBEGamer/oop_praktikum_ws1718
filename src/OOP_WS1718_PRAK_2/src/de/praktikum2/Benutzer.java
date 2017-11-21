@@ -14,18 +14,22 @@ public class Benutzer {
 		char[] passWort;
 
 
-
+		/**  konst */
+		/** @param _user_id benutzer id*/
+		/** @param _password passwort */
 		public Benutzer(String _user_id, char[] _password){
 				this.userId = _user_id;
 				this.passWort = _password;
 		}
-
+		/** handwrite friendly konst */
+		/** @param _user_id benutzer id*/
+		/** @param _password passwort */
 		public Benutzer(String _user_id, String _password){
 				this.userId = _user_id;
 				this.passWort = new char[_password.length()];
 				this.passWort = _password.toCharArray();
 		}
-
+		/** defualt konst */
 		public Benutzer(){
 				userId = "";
 				passWort = new char[32];
@@ -53,12 +57,11 @@ public class Benutzer {
 				Benutzer _obj_cast = (Benutzer) _obj;
 				//check field
 
-				if(_obj_cast.userId == this.userId && String.copyValueOf(_obj_cast.passWort) == String.copyValueOf(this.passWort)) {
+				if(_obj_cast.userId.equals(this.userId) && String.copyValueOf(_obj_cast.passWort).equals(String.copyValueOf(this.passWort))) {
 						return true;
 				}
 				return false;
 		}
-
 
 		/** formatierter string der daten */
 		/** @return nice string */

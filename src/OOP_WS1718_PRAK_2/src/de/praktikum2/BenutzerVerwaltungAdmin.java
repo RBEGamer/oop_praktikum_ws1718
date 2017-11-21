@@ -13,13 +13,11 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		private ArrayList<Benutzer> users;
 
 
-
+		/** DEFAULT KONST **/
 		public BenutzerVerwaltungAdmin(){
-
 				users =new ArrayList<Benutzer>();
 				users.clear();
 		}
-
 		/** trägt einen neuen benutzer ein */
 		/** @param _benutzer punkt zum checken*/
 		/** @return void */
@@ -65,7 +63,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 			    return true;
 		}
 
-/** schaut ob zwei benutzer gleich sind */
+		/** schaut ob zwei benutzer gleich sind */
 		/** @param _benutzer Benutzer  zum löschen */
 		/** @return void */
 		public void benutzerLoeschen(Benutzer _benutzer) throws Exception{
@@ -95,7 +93,6 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 						System.out.println( users.get(i).toString());
 				}
 		}
-
 		/** schaut ob zwei benutzer gleich sind */
 		/** @param _userid String der uiserid zum checken*/
 		/** @return int returns index of the array with the user -1 means obj not in */
@@ -105,7 +102,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				}
 
 				for (int i = 0; i < users.size(); i++){
-						if(users.get(i).userId == _userid){
+						if(users.get(i).userId.equals(_userid)){
 								return i;
 						}
 				}
