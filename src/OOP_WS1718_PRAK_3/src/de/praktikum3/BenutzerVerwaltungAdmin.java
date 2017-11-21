@@ -33,7 +33,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @param _benutzer punkt zum checken*/
 		/** @return void */
 		public void benutzereintragen(Benutzer _benutzer) throws Exception{
-				users = parse_csv_string(readFile(DB_PATH));
+				parse_csv_string_to_users_list(readFile(DB_PATH));
 				//CHECK NULL
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + " benutzereintragen got parameter with NULL");
@@ -60,7 +60,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @param _benutzer benutzer zum checken*/
 		/** @return boolean if valid the true */
 		public boolean benutzerOk(Benutzer _benutzer) throws Exception{
-				users = parse_csv_string(readFile(DB_PATH));
+				parse_csv_string_to_users_list(readFile(DB_PATH));
 				// check null
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + " benutzerok got parameter with NULL");
@@ -77,90 +77,102 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 			    //return true when found
 			    return true;
 		}
-
-/** schaut ob zwei benutzer gleich sind */
+		/** schaut ob zwei benutzer gleich sind */
 		/** @param _benutzer Benutzer  zum löschen */
 		/** @return void */
 		public void benutzerLoeschen(Benutzer _benutzer) throws Exception{
 				// check null alternativ Objects.nonNull(reference) liefert automatisch illegalargumentexception
-				users = parse_csv_string(readFile(DB_PATH));
+				parse_csv_string_to_users_list(readFile(DB_PATH));
 
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"] " +getClass().getEnclosingMethod().getName() + " got parameter with NULL");
 				}
 				//EXISTS NO USER IN LIST
-				int ret= find_user_index_by_userid(_benutzer.userId);
+				int ret= find_user_index_by_user(_benutzer);
 				if(ret < 0){
 						throw new Exception_Datenbankfehler("[" + this.getClass().toString() +"]" + " benutzbenutzerLöschenerok user not registered for delete");
 				}
 				//CHECK EQUALS ObjeCT
-				if(!users.get(ret).equals(_benutzer)){
-						throw new Exception_Datenbankfehler("[" + this.getClass().toString() +"]" + " benutzbenutzerLöschenerok user not equals with the register");
-				}
+				//if(!users.get(ret).equals(_benutzer)){
+				//		throw new Exception_Datenbankfehler("[" + this.getClass().toString() +"]" + " benutzbenutzerLöschenerok user not equals with the register");
+				//}
 				//REMOVE USER
 				users.remove(ret);
 				//UPDATE DB
 				check_db_changes();
 		}
-
-
 		/** listet alle registrierten benutzer auf */
 		public void listBenutzer() throws Exception{
-				users = parse_csv_string(readFile(DB_PATH));
+				parse_csv_string_to_users_list(readFile(DB_PATH));
 
 				for (int i = 0; i < users.size(); i++){
 						System.out.println( users.get(i).toString());
 				}
 		}
-
-		/** schaut ob zwei benutzer gleich sind */
-		/** @param _userid String der uiserid zum checken*/
+		/** schaut ob zwei benutzerids gleich sind */
+		/** @param _user  user zum checken*/
 		/** @return int returns index of the array with the user -1 means obj not in */
-	private int find_user_index_by_userid(String _userid) throws Exception{
+		private int find_user_index_by_userid(String _userid) throws Exception{
 				if(_userid == ""){
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + " name string empty");
 				}
 
 				for (int i = 0; i < users.size(); i++){
-						if(users.get(i).userId == _userid){
+						if(users.get(i).userId.equals(_userid)){
+
 								return i;
 						}
 				}
 			return -1;
 	}
+		/** schaut ob zwei benutzer gleich sind */
+		/** @param _userid String der uiserid zum checken*/
+		/** @return int returns index of the array with the user -1 means obj not in */
+		private int find_user_index_by_user(Benutzer _user) throws Exception{
+				if(_user == null){
+						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + "  user is null");
+				}
 
-
-	public void dbInitialisieren() throws Exception{
-
-//check file exists
+				for (int i = 0; i < users.size(); i++){
+						if(users.get(i).equals(_user)){
+								return i;
+						}
+				}
+				return -1;
+		}
+		/** erstellt eine neue Datenbank datei welche aber leer ist */
+		/** @return void */
+		public void dbInitialisieren() throws Exception{
+			//check file exists
 			File f = new File(DB_PATH);
 			//WENN DB EXISTSTIERT LESEN SONST NEUE SCHREIBEN
 			if(f.exists() && !f.isDirectory()) {
-					// read file
-					System.out.println("db_init read existring db file");
-					users = parse_csv_string(readFile(DB_PATH));
 			}else{
 					System.out.println("CREATE INITIAL DB FILE");
-					write_file(create_csv_string(users),DB_PATH);
+					write_file(create_csv_string(),DB_PATH);
 			}
 	}
-
+		/** schaut ob die Datenbank datei erneut geschriben werden muss */
+		/** @return void */
 	private void check_db_changes() throws Exception{
 			//READ CHECK SAME ENTRIES ESLE WRITE NEW FILE
 			File f = new File(DB_PATH);
 			//WENN DB DATEI NICHT EXISTIERT EINE NEUE ERSTELLEN
 			if(f.exists() && !f.isDirectory()) {
 					//SCHAUE OB ÄNDERUNGEN GESCHRIBEN WERDEN MÜSSEN
-					if(readFile(DB_PATH) != create_csv_string(users)){
+					if(readFile(DB_PATH) != create_csv_string()){
 							System.out.println("check_db write updated db");
-							write_file(create_csv_string(users),DB_PATH);
+							write_file(create_csv_string(),DB_PATH);
 					}
 			}else{
 					dbInitialisieren();
 			}
 
 	}
-
+		/** schreibt einen string als datei an den path */
+		/** @param _content string als dateiinhalt */
+		/** @param _path dateipfad + name */
+		/** @return void */
 	private void write_file(String _content, String _path) throws Exception{
 			try {
 					File statText = new File(_path);
@@ -173,8 +185,9 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				throw new Exception_Datenbankfehler("File output failed");
 			}
 	}
-
-	private String create_csv_string(ArrayList<Benutzer> _data){
+		/** lerstell einen csv string aus der benutzerliste*/
+		/** @return String csv string  */
+	private String create_csv_string(){
 			StringBuilder csv_string = new StringBuilder();
 		for(int i = 0; i < users.size(); i++){
 				csv_string.append(i);
@@ -183,15 +196,19 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				csv_string.append(";");
 				csv_string.append(String.copyValueOf(users.get(i).passWort).toString());
 				csv_string.append(";");
+				csv_string.append((System.currentTimeMillis() / 1000));
+				csv_string.append(";");
 				csv_string.append(System.getProperty("line.separator"));
 		}
 		return csv_string.toString();
 	}
-
-	public String readFile(String filename)throws Exception
+		/** liesst den inhalt der datei */
+		/** @param _filename dateipfad + name */
+		/** @return String gesamter content der Datei als String */
+	public String readFile(String _filename)throws Exception
 		{
 				String content = null;
-				File file = new File(filename); //for ex foo.txt
+				File file = new File(_filename); //for ex foo.txt
 				FileReader reader = null;
 				try {
 						reader = new FileReader(file);
@@ -207,30 +224,47 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				return content;
 		}
 
-		ArrayList<Benutzer> parse_csv_string(String _csv) throws Exception{
-	// CHECK FOR ; CSV STUFF
+
+		/** _liesst einen csv string und erstellt eine Benutzer liste */
+		/** @param _csv dateipfad + name */
+		/** @return String gesamter content der Datei als String */
+		private void parse_csv_string_to_users_list(String _csv) throws Exception{
+				if(users == null){
+						throw new Exception_Datenbankfehler("users list null please call constructor");
+				}
+				users.clear();
+				//IF STRING EMPTY -> NO USERS TO ADD
+				if(_csv.length() <= 0){
+						return;
+				}
+				// CHECK FOR ; CSV SPERATORS
 		if(!_csv.contains(";")){
 			throw new Exception_Datenbankfehler("CSV String not compatible");
 		}
 
-				ArrayList<Benutzer> tmp = new ArrayList<Benutzer>();
+
+
 				//SPLIT NEW LINE
 				String lines[] = _csv.split(System.getProperty("line.separator"));
 
 				for (int i = 0; i < lines.length; i++) {
 						//CHEKCK IF LINE CONTAINS 3 ;
-						if(count_chars_in_string(lines[i],';') != 3){
+						if(count_chars_in_string(lines[i],';') != 4){
 								throw new Exception_Datenbankfehler("Failed to parse csv string ; number doesnt matches");
 						}
 						//PARSE STRING
-						String line_data[] = _csv.split(";");
+						String csv_without_new_line = lines[i].replace(System.getProperty("line.separator"), "");
+						String line_data[] = csv_without_new_line.split(";");
+
 						//CREATE NEW USER
+						if(line_data[1] == "" || line_data[2] == ""){
+								throw new Exception_Datenbankfehler("csv row not complete filled");
+						}
 						Benutzer tmp_user = new Benutzer(line_data[1],line_data[2]);
 						System.out.println("parse user : " + tmp_user.toString());
 						//ADD USER TO COLLECTION
-						tmp.add(tmp_user);
+						users.add(tmp_user);
 				}
-				return  tmp;
 		}
 
 

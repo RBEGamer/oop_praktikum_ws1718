@@ -52,8 +52,7 @@ public class Benutzer {
 				//cast to main type
 				Benutzer _obj_cast = (Benutzer) _obj;
 				//check field
-
-				if(_obj_cast.userId == this.userId && String.copyValueOf(_obj_cast.passWort) == String.copyValueOf(this.passWort)) {
+				if( this.userId.equals(_obj_cast.userId) && String.copyValueOf(_obj_cast.passWort).equals(String.copyValueOf(this.passWort))) {
 						return true;
 				}
 				return false;
