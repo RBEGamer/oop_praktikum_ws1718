@@ -20,7 +20,12 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 
 
 		private ArrayList<Benutzer> users;
-		final String DB_PATH = "./db.ser";
+
+	public String getDB_PATH() {
+		return DB_PATH;
+	}
+
+	final String DB_PATH = "./db.ser";
 
 
 		public BenutzerVerwaltungAdmin(){
@@ -88,7 +93,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"] " +getClass().getEnclosingMethod().getName() + " got parameter with NULL");
 				}
 				//EXISTS NO USER IN LIST
-				int ret= find_user_index_by_user(_benutzer);
+				int ret= users.indexOf(_benutzer);
 				if(ret < 0){
 						throw new Exception_Datenbankfehler("[" + this.getClass().toString() +"]" + " benutzbenutzerLöschenerok user not registered for delete");
 				}
@@ -143,23 +148,25 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** erstellt eine neue Datenbank datei welche aber leer ist */
 		/** @return void */
 		public void dbInitialisieren() throws Exception{
-			//check file exists
+
 			File f = new File(DB_PATH);
 			//WENN DB EXISTSTIERT LESEN SONST NEUE SCHREIBEN
-			if(f.exists() && !f.isDirectory()) {
-			}else{
+			//if(!f.exists() && !f.isDirectory()) {
 					System.out.println("CREATE INITIAL DB FILE");
-					write_file(create_csv_string(),DB_PATH);
-			}
+					write_file("",DB_PATH);
+
+			//}
+
 	}
-		/** schaut ob die Datenbank datei erneut geschriben werden muss */
+
+		/** schaut ob die Datenbank datei erneut geschrieben werden muss */
 		/** @return void */
 	private void check_db_changes() throws Exception{
-			//READ CHECK SAME ENTRIES ESLE WRITE NEW FILE
+			//READ CHECK SAME ENTRIES Else WRITE NEW FILE
 			File f = new File(DB_PATH);
 			//WENN DB DATEI NICHT EXISTIERT EINE NEUE ERSTELLEN
 			if(f.exists() && !f.isDirectory()) {
-					//SCHAUE OB ÄNDERUNGEN GESCHRIBEN WERDEN MÜSSEN
+					//SCHAUE OB ÄNDERUNGEN GESCHRIEBEN WERDEN MÜSSEN
 					if(readFile(DB_PATH) != create_csv_string()){
 							System.out.println("check_db write updated db");
 							write_file(create_csv_string(),DB_PATH);
@@ -173,7 +180,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @param _content string als dateiinhalt */
 		/** @param _path dateipfad + name */
 		/** @return void */
-	private void write_file(String _content, String _path) throws Exception{
+	private void write_file(String _content, String _path) throws Exception {
 			try {
 					File statText = new File(_path);
 					FileOutputStream is = new FileOutputStream(statText);
@@ -185,7 +192,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				throw new Exception_Datenbankfehler("File output failed");
 			}
 	}
-		/** lerstell einen csv string aus der benutzerliste*/
+		/** erstell einen csv string aus der benutzerliste*/
 		/** @return String csv string  */
 	private String create_csv_string(){
 			StringBuilder csv_string = new StringBuilder();
@@ -208,7 +215,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 	public String readFile(String _filename)throws Exception
 		{
 				String content = null;
-				File file = new File(_filename); //for ex foo.txt
+				File file = new File(_filename);
 				FileReader reader = null;
 				try {
 						reader = new FileReader(file);
@@ -225,7 +232,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		}
 
 
-		/** _liesst einen csv string und erstellt eine Benutzer liste */
+		/** _liest einen csv string und erstellt eine Benutzer liste */
 		/** @param _csv dateipfad + name */
 		/** @return String gesamter content der Datei als String */
 		private void parse_csv_string_to_users_list(String _csv) throws Exception{
@@ -241,14 +248,11 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		if(!_csv.contains(";")){
 			throw new Exception_Datenbankfehler("CSV String not compatible");
 		}
-
-
-
 				//SPLIT NEW LINE
 				String lines[] = _csv.split(System.getProperty("line.separator"));
 
 				for (int i = 0; i < lines.length; i++) {
-						//CHEKCK IF LINE CONTAINS 3 ;
+						//CHECK IF LINE CONTAINS 3 ;
 						if(count_chars_in_string(lines[i],';') != 4){
 								throw new Exception_Datenbankfehler("Failed to parse csv string ; number doesnt matches");
 						}
@@ -261,7 +265,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 								throw new Exception_Datenbankfehler("csv row not complete filled");
 						}
 						Benutzer tmp_user = new Benutzer(line_data[1],line_data[2]);
-						System.out.println("parse user : " + tmp_user.toString());
+						//System.out.println("parse user : " + tmp_user.toString());
 						//ADD USER TO COLLECTION
 						users.add(tmp_user);
 				}
