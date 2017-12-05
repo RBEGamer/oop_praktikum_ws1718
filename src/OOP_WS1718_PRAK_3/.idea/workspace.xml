@@ -22,25 +22,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BenutzerVerwaltungAdmin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BenutzerVerwaltungAdmin.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdmin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="265" column="25" lean-forward="true" selection-start-line="265" selection-start-column="25" selection-end-line="265" selection-end-column="25" />
+            <state relative-caret-position="1461">
+              <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#573#574#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#415#416#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistentBenutzerVerwaltungAdminTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PersistentBenutzerVerwaltungAdminTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JUnitTests/de/praktikum3/PersistentBenutzerVerwaltungAdminTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="72" column="33" lean-forward="false" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+            <state relative-caret-position="1014">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,10 +51,18 @@
       <file leaf-file-name="Benutzer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/praktikum3/Benutzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="608">
+              <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#1538#1539#0" expanded="true" />
+                <element signature="e#1567#1568#0" expanded="true" />
+                <element signature="e#1602#1603#0" expanded="true" />
+                <element signature="e#1633#1634#0" expanded="true" />
+                <element signature="e#1677#1678#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="e#1761#1762#0" expanded="true" />
+                <element signature="e#1801#1802#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +81,7 @@
       <file leaf-file-name="Exception_Datenbankfehler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/praktikum3/Exception_Datenbankfehler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="182">
               <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
@@ -83,8 +91,8 @@
       <file leaf-file-name="BenutzerVerwaltungAdminTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JUnitTests/de/praktikum3/BenutzerVerwaltungAdminTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="57" selection-end-column="32" />
+            <state relative-caret-position="1119">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,6 +112,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>syst</find>
+      <find>dbin</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -121,11 +130,11 @@
         <option value="$PROJECT_DIR$/JUnitTests/de/praktikum3/BenutzerVerwaltungAdminTestLoeschen.java" />
         <option value="$PROJECT_DIR$/db.ser" />
         <option value="$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdminTest.java" />
-        <option value="$PROJECT_DIR$/src/de/praktikum3/Benutzer.java" />
         <option value="$PROJECT_DIR$/src/de/praktikum3/Main.java" />
         <option value="$PROJECT_DIR$/JUnitTests/de/praktikum3/BenutzerVerwaltungAdminTest.java" />
-        <option value="$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdmin.java" />
         <option value="$PROJECT_DIR$/JUnitTests/de/praktikum3/PersistentBenutzerVerwaltungAdminTest.java" />
+        <option value="$PROJECT_DIR$/src/de/praktikum3/Benutzer.java" />
+        <option value="$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdmin.java" />
       </list>
     </option>
   </component>
@@ -225,7 +234,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BenutzerVerwaltungAdminTest">
+  <component name="RunManager" selected="JUnit.PersistentBenutzerVerwaltungTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="de.praktikum3.Main" />
@@ -356,20 +365,11 @@
       <workItem from="1512409439915" duration="40000" />
       <workItem from="1512409845473" duration="1219000" />
       <workItem from="1512411107871" duration="1865000" />
-      <workItem from="1512417107646" duration="13509000" />
+      <workItem from="1512417107646" duration="16731000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 12h 58m 57s.xml">
-      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 12h 59m 17s.xml">
-      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 12h 59m 35s.xml">
-      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 13h 02m 11s.xml">
       <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
     </history-entry>
@@ -388,12 +388,21 @@
     <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 13h 13m 19s.xml">
       <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PersistentBenutzerVerwaltungTest - 2017.12.05 at 12h 56m 38s.xml">
+    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 13h 15m 00s.xml">
+      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 14h 39m 58s.xml">
+      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BenutzerVerwaltungAdminTest - 2017.12.05 at 14h 43m 29s.xml">
+      <configuration name="BenutzerVerwaltungAdminTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersistentBenutzerVerwaltungTest - 2017.12.05 at 14h 43m 44s.xml">
       <configuration name="PersistentBenutzerVerwaltungTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24534000" />
+    <option name="totallyTimeSpent" value="27756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="870" extended-state="6" />
@@ -408,11 +417,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4978903" sideWeight="0.505" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37974682" sideWeight="0.495" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0028129395" sideWeight="0.495" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.264375" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -486,8 +495,8 @@
           <caret line="170" column="5" lean-forward="true" selection-start-line="170" selection-start-column="5" selection-end-line="170" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -506,6 +515,14 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -558,6 +575,14 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -594,8 +619,8 @@
           <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -614,8 +639,8 @@
           <caret line="199" column="31" lean-forward="false" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -634,6 +659,14 @@
           <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -668,8 +701,8 @@
           <caret line="199" column="31" lean-forward="false" selection-start-line="199" selection-start-column="31" selection-end-line="199" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -688,6 +721,14 @@
           <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -720,29 +761,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JUnitTests/de/praktikum3/PersistentBenutzerVerwaltungAdminTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/praktikum3/Exception_Datenbankfehler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="182">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.ser">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/praktikum3/Benutzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,34 +787,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdmin.java">
+    <entry file="file://$PROJECT_DIR$/src/de/praktikum3/Benutzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="265" column="25" lean-forward="true" selection-start-line="265" selection-start-column="25" selection-end-line="265" selection-end-column="25" />
+        <state relative-caret-position="608">
+          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1801#1802#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.ser">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JUnitTests/de/praktikum3/BenutzerVerwaltungAdminTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="6" selection-end-line="57" selection-end-column="32" />
+        <state relative-caret-position="1119">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JUnitTests/de/praktikum3/PersistentBenutzerVerwaltungAdminTest.java">
+    <entry file="file://$PROJECT_DIR$/src/de/praktikum3/BenutzerVerwaltungAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="72" column="33" lean-forward="false" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+        <state relative-caret-position="1461">
+          <caret line="183" column="0" lean-forward="true" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>

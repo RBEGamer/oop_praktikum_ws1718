@@ -50,12 +50,10 @@ public class PersistentBenutzerVerwaltungAdminTest {
         testAdmin.benutzereintragen(testuserok);
     }
 
-
     @Test public void stage_6benutzerfinden () throws Exception {
         Benutzer testuserok = new Benutzer("albert", "magkatzensehrgerne");
         testAdmin.benutzerOk(testuserok);
         testAdmin.listBenutzer();
-
     }
 
 
@@ -73,5 +71,4 @@ public class PersistentBenutzerVerwaltungAdminTest {
         testAdmin.listBenutzer();
         testAdmin.benutzerLoeschen(testuserloeschen);
     }
-
 }

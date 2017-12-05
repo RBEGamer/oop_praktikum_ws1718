@@ -5,16 +5,11 @@
  desc klasse zum bearbeiten und speichern der benutzertablle
  */
 package de.praktikum3;
+import java.io.*;
 import java.util.*;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+
 public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 
 
@@ -38,7 +33,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @param _benutzer punkt zum checken*/
 		/** @return void */
 		public void benutzereintragen(Benutzer _benutzer) throws Exception{
-				parse_csv_string_to_users_list(readFile(DB_PATH));
+				readFile(DB_PATH);
 				//CHECK NULL
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + " benutzereintragen got parameter with NULL");
@@ -65,7 +60,8 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @param _benutzer benutzer zum checken*/
 		/** @return boolean if valid the true */
 		public boolean benutzerOk(Benutzer _benutzer) throws Exception{
-				parse_csv_string_to_users_list(readFile(DB_PATH));
+
+			readFile(DB_PATH);
 				// check null
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"]" + " benutzerok got parameter with NULL");
@@ -87,8 +83,8 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @return void */
 		public void benutzerLoeschen(Benutzer _benutzer) throws Exception{
 				// check null alternativ Objects.nonNull(reference) liefert automatisch illegalargumentexception
-				parse_csv_string_to_users_list(readFile(DB_PATH));
-
+				//parse_csv_string_to_users_list(readFile(DB_PATH));
+			readFile(DB_PATH);
 				if (_benutzer == null) {
 						throw new IllegalArgumentException("[" + this.getClass().toString() +"] " +getClass().getEnclosingMethod().getName() + " got parameter with NULL");
 				}
@@ -108,7 +104,9 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		}
 		/** listet alle registrierten benutzer auf */
 		public void listBenutzer() throws Exception{
-				parse_csv_string_to_users_list(readFile(DB_PATH));
+
+			readFile(DB_PATH);
+			//parse_csv_string_to_users_list(readFile(DB_PATH));
 
 				for (int i = 0; i < users.size(); i++){
 						System.out.println( users.get(i).toString());
@@ -145,27 +143,35 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 				}
 				return -1;
 		}
+
+
+
 		/** erstellt eine neue Datenbank datei welche aber leer ist */
 		/** @return void */
 		public void dbInitialisieren() throws Exception{
 
-			File f = new File(DB_PATH);
+			users.clear();
+			ser();
+
+		/*	File f = new File(DB_PATH);
 			//WENN DB EXISTSTIERT LESEN SONST NEUE SCHREIBEN
 			//if(!f.exists() && !f.isDirectory()) {
 					System.out.println("CREATE INITIAL DB FILE");
 					write_file("",DB_PATH);
-
+         */
 			//}
-
 	}
 
 		/** schaut ob die Datenbank datei erneut geschrieben werden muss */
 		/** @return void */
 	private void check_db_changes() throws Exception{
-			//READ CHECK SAME ENTRIES Else WRITE NEW FILE
-			File f = new File(DB_PATH);
+
+		ser();
+
+		//READ CHECK SAME ENTRIES Else WRITE NEW FILE
+			//File f = new File(DB_PATH);
 			//WENN DB DATEI NICHT EXISTIERT EINE NEUE ERSTELLEN
-			if(f.exists() && !f.isDirectory()) {
+			/*if(f.exists() && !f.isDirectory()) {
 					//SCHAUE OB ÄNDERUNGEN GESCHRIEBEN WERDEN MÜSSEN
 					if(readFile(DB_PATH) != create_csv_string()){
 							System.out.println("check_db write updated db");
@@ -174,6 +180,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 			}else{
 					dbInitialisieren();
 			}
+			*/
 
 	}
 		/** schreibt einen string als datei an den path */
@@ -214,7 +221,22 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 		/** @return String gesamter content der Datei als String */
 	public String readFile(String _filename)throws Exception
 		{
-				String content = null;
+
+
+				String content = "";
+            users.clear();
+			FileInputStream fis = null;
+			ObjectInputStream in = null;
+			try {
+				fis = new FileInputStream(DB_PATH);
+				in = new ObjectInputStream(fis);
+				users = (ArrayList<Benutzer>) in.readObject();
+				in.close();
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+
+				/*
 				File file = new File(_filename);
 				FileReader reader = null;
 				try {
@@ -227,8 +249,9 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 						throw  new Exception_Datenbankfehler("cant read file");
 				} finally {
 						if(reader !=null){reader.close();}
-				}
+				} */
 				return content;
+
 		}
 
 
@@ -284,5 +307,14 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung {
 						}
 				}
 				return count;
+		}
+
+		public void ser(  ) {
+			try {
+			FileOutputStream fileOut = new FileOutputStream(DB_PATH);
+			ObjectOutputStream out = new ObjectOutputStream(fileOut);
+			out.writeObject(users);
+			out.close();
+		} catch( IOException e){ }
 		}
 }

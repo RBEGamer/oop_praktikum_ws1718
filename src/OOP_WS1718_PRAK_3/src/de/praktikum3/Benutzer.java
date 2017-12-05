@@ -7,7 +7,9 @@
 
 package de.praktikum3;
 
-public class Benutzer {
+import java.io.Serializable;
+
+public class Benutzer implements Serializable {
 
 
 		String  userId;
@@ -65,4 +67,20 @@ public class Benutzer {
 		public String toString() {
 				return "["+getClass().getName()+"] username: " + userId + " password:" + String.copyValueOf(this.passWort).toString() + "";
 		}
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public char[] getPassWort() {
+        return passWort;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setPassWort(char[] passWort) {
+        this.passWort = passWort;
+    }
 }
